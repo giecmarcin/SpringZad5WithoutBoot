@@ -23,7 +23,6 @@ import java.util.List;
 
 @Repository
 public class ContactDaoImpl implements ContactDao {
-
     private JdbcTemplate jdbcTemplate;
 
     @Autowired

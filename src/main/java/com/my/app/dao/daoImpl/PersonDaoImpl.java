@@ -24,13 +24,13 @@ import java.util.List;
  */
 @Repository
 public class PersonDaoImpl implements PersonDao {
-
     private JdbcTemplate jdbcTemplate;
 
     @Autowired
     public void setDataSource(DataSource dataSource){
         this.jdbcTemplate = new JdbcTemplate(dataSource);
     }
+
 
     @Autowired
     private ContactDao contactDao;

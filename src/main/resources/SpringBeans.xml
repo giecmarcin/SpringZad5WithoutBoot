@@ -6,11 +6,11 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache.xsd">
 
     <context:property-placeholder location="classpath:application.properties"/>
-    <context:component-scan base-package="com.my.app.dao"/>
+    <context:component-scan base-package="com.my.app"/>
     <context:annotation-config/>
-    <!--<bean id="PersonDao" class="com.my.app.dao.daoImpl.PersonDaoImpl">-->
-        <!--<property name="dataSource" ref="dataSource"/>-->
-    <!--</bean>-->
+    <bean id="PersonDao" class="com.my.app.dao.daoImpl.PersonDaoImpl">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
 
     <!--<bean id="ContactDao" class="com.my.app.dao.daoImpl.ContactDaoImpl">-->
         <!--<property name="dataSource" ref="dataSource"/>-->
