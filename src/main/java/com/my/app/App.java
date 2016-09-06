@@ -26,10 +26,9 @@ public class App
 
     public static void main( String[] args )
     {
-
         ApplicationContext context = new ClassPathXmlApplicationContext("SpringBeans.xml");
-        PersonDao personDao = (PersonDao) context.getBean("PersonDao");
-        ContactDao contactDao = (ContactDao)context.getBean("ContactDao");
+        PersonDao personDao =  context.getBean("personDaoImpl", PersonDao.class);
+        ContactDao contactDao = context.getBean("contactDaoImpl", ContactDao.class);
 
         String personFirstname = UUID.randomUUID().toString();
         String personLastname = UUID.randomUUID().toString();
@@ -49,7 +48,5 @@ public class App
         for (Contact c : contactsFromDb){
             System.out.println(c.toString());
         }
-
-
     }
 }

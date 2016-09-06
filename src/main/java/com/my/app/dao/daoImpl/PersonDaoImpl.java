@@ -34,8 +34,8 @@ public class PersonDaoImpl implements PersonDao {
 
 
     @Autowired
-    @Qualifier("ContactDao")
-    private ContactDao contactDao;
+    //@Qualifier("ContactDao")
+    private ContactDaoImpl contactDao;
 
 
     @Override
