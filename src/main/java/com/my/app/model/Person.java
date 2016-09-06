@@ -76,4 +76,14 @@ public class Person {
         result = 31 * result + (contacts != null ? contacts.hashCode() : 0);
         return result;
     }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastname='" + lastname + '\'' +
+                ", contacts=" + contacts +
+                '}';
+    }
 }

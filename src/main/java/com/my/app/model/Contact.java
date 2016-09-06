@@ -78,4 +78,14 @@ public class Contact {
         result = 31 * result + (value != null ? value.hashCode() : 0);
         return result;
     }
+
+    @Override
+    public String toString() {
+        return "Contact{" +
+                "id=" + id +
+                ", type='" + type + '\'' +
+                ", value='" + value + '\'' +
+                ", idPerson=" + idPerson +
+                '}';
+    }
 }

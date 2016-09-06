@@ -8,13 +8,14 @@
     <context:property-placeholder location="classpath:application.properties"/>
     <context:component-scan base-package="com.my.app"/>
     <context:annotation-config/>
+
     <bean id="PersonDao" class="com.my.app.dao.daoImpl.PersonDaoImpl">
         <property name="dataSource" ref="dataSource"/>
     </bean>
 
-    <!--<bean id="ContactDao" class="com.my.app.dao.daoImpl.ContactDaoImpl">-->
-        <!--<property name="dataSource" ref="dataSource"/>-->
-    <!--</bean>-->
+    <bean id="ContactDao" class="com.my.app.dao.daoImpl.ContactDaoImpl">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
 
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="${jdbc.driverClassName}"/>

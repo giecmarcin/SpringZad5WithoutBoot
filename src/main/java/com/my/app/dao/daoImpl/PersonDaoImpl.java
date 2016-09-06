@@ -6,6 +6,7 @@ import com.my.app.model.Contact;
 import com.my.app.model.Person;
 import com.my.app.model.PersonRowMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementCreator;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
@@ -33,7 +34,9 @@ public class PersonDaoImpl implements PersonDao {
 
 
     @Autowired
+    @Qualifier("ContactDao")
     private ContactDao contactDao;
+
 
     @Override
     public Person savePerson(Person person) {
